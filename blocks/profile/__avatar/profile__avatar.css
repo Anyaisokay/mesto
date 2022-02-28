@@ -1,0 +1,10 @@
+.profile__avatar {
+    grid-column: 1;
+}
+
+@media screen and (max-width: 750px) {
+    .profile__avatar {
+        grid-row: 1;
+        justify-self: center;
+    }
+}

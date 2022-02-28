@@ -1,0 +1,13 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    /*max-width: 880px;*/
+    /*width: 100%;*/
+    margin: 45px 15.625% 0 15.625%;
+}
+
+@media screen and (max-width: 880px){
+  .header {
+    margin: 28px auto 0 auto;
+  }
+}
