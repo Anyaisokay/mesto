@@ -19,3 +19,11 @@
         
     }
 }
+
+@media screen and (max-width: 500px) {
+    .profile__info {
+        width: 282px;
+        margin-left: 0;
+    
+    }
+}

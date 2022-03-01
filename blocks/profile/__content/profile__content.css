@@ -8,12 +8,13 @@
 @media screen and (max-width: 750px) {
     .profile__content {
         align-self: center;
+
     }
 }
 
 @media screen and (max-width: 500px) {
     .profile__content {
-        margin: 14px auto 0;
+        margin: 9px auto 0;
         font-size: 14px;
         line-height: 17px;
         max-width: 282px;
