@@ -8,13 +8,12 @@
     font-size: 18px;
     line-height: 22px;
     margin: 48px auto 0 auto;
-    line-height: 17px;
     color: white;
     border: 0;
     border-radius: 2px;
     background-color: black;
     cursor: pointer;
-    transition: opacity 0.3s ease-out; 
+    transition: opacity 0.3s ease-out;
 }
 
 .popup__save:hover {
