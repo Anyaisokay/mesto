@@ -7,4 +7,10 @@
     margin: 0;
     align-self: center;
     background-color: white;
+    cursor: pointer;
+    transition: opacity 0.3s ease-out;
+}
+
+.card__like:hover {
+    opacity: 0.6;
 }
