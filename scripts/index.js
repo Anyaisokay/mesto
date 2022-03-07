@@ -16,18 +16,19 @@ let profileName = document.querySelector('.profile__name');
 let profileContent = document.querySelector('.profile__content');
 
 
-// добавляем модификатор, если попап закрыт, удаляем - если открыт
-function togglePopup() {
-  formElement.classList.toggle('popup_opened');
-}
 
 // открываем попап с внесением в поля значений из профиля
 function openPopup() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileContent.textContent;
-  togglePopup();
+  formElement.classList.add('popup_opened');
 }
 
+// закрываем попап
+
+function closePopup() {
+  formElement.classList.remove('popup_opened');
+}
 
 // Обработчик «отправки» формы, хотя пока она никуда отправляться не будет
 function formSubmitHandler (evt) {
@@ -41,14 +42,15 @@ function formSubmitHandler (evt) {
     // вставляем новые значения с помощью textContent
     profileName.textContent = name;
     profileContent.textContent = job;
-    togglePopup();
+
+    closePopup();
 }
 
 
 // закрываем попап в случае клика вне формы
 function closeOutForm(event) {
     if (event.target === event.currentTarget) {
-        togglePopup();
+        closePopup();
     }
 
 }
@@ -59,4 +61,4 @@ formElement.addEventListener('click', closeOutForm);
 // Прикрепляем обработчик к кнопке изменить
 editButton.addEventListener('click', openPopup);
 // Прикрепляем обработчик к кнопке закрыть
-closeButton.addEventListener('click', togglePopup);
+closeButton.addEventListener('click', closePopup);
