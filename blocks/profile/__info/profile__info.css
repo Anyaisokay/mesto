@@ -1,5 +1,5 @@
 .profile__info {
-   
+
     width: 366px;
     grid-column: 2;
     margin-left: 30px;
@@ -16,14 +16,13 @@
         justify-self: center;
         justify-content: center;
         margin-top: 26px;
-        
+
     }
 }
 
 @media screen and (max-width: 500px) {
     .profile__info {
-        width: 282px;
         margin-left: 0;
-    
+
     }
 }

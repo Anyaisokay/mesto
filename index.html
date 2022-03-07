@@ -9,7 +9,6 @@
   <body class="page">
     <header class="header">
       <img class="header__logo" src="./images/logo.svg" alt="Логотип" />
-      <hr class="header__line" />
     </header>
     <main class="content">
       <section class="profile">
@@ -21,11 +20,11 @@
         <div class="profile__info">
           <div class="profile__name-button">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button"></button>
+            <button class="profile__edit-button" type="button" aria-label="Редактировать профиль"></button>
           </div>
           <p class="profile__content">Исследователь океана</p>
         </div>
-        <button class="profile__add-button"></button>
+        <button class="profile__add-button" type="button" aria-label="Добавить фото"></button>
       </section>
       <section class="cards">
         <ul class="cards__grid">
@@ -37,21 +36,21 @@
             />
             <div class="card__content">
               <h2 class="card__title">Курайская степь</h2>
-              <button class="card__like"></button>
+              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
             </div>
           </li>
           <li class="card">
             <img class="card__pic" src="./images/ai-petri.jpg" alt="Ай-Петри" />
             <div class="card__content">
               <h2 class="card__title">Ай-Петри</h2>
-              <button class="card__like"></button>
+              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
             </div>
           </li>
           <li class="card">
             <img class="card__pic" src="./images/derbent.jpg" alt="Дербент" />
             <div class="card__content">
               <h2 class="card__title">Дербент</h2>
-              <button class="card__like"></button>
+              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
             </div>
           </li>
           <li class="card">
@@ -62,7 +61,7 @@
             />
             <div class="card__content">
               <h2 class="card__title">Сулакский каньон</h2>
-              <button class="card__like"></button>
+              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
             </div>
           </li>
           <li class="card">
@@ -73,45 +72,47 @@
             />
             <div class="card__content">
               <h2 class="card__title">Никола-Ленивец</h2>
-              <button class="card__like"></button>
+              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
             </div>
           </li>
           <li class="card">
             <img class="card__pic" src="./images/simeis.jpg" alt="Симеиз" />
             <div class="card__content">
               <h2 class="card__title">Симеиз</h2>
-              <button class="card__like"></button>
+              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
             </div>
           </li>
         </ul>
       </section>
-      <section class="footer">
-        <p class="footer__content">© 2022 Mesto Russia</p>
-      </section>
-      <div class="popup">
-        <div class="popup__container">
-          <button class="popup__close" type="button"></button>
-          <form class="popup__content">
-            <h2 class="popup__title">Редактировать профиль</h2>
-            <fieldset class="popup__content-fields">
-              <input
-                class="popup__field popup__field_name"
-                type="text"
-                value="Жак-Ив Кусто"
-                placeholder="Имя"
-              />
-              <input
-                class="popup__field popup__field_job"
-                type="text"
-                value="Исследователь океана"
-                placeholder="Описание"
-              />
-              <input class="popup__save" type="submit" value="Сохранить" />
-            </fieldset>
-          </form>
-        </div>
-      </div>
     </main>
+    <footer class="footer">
+      <p class="footer__content">© 2022 Mesto Russia</p>
+    </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close" type="button" aria-label="Закрыть окно"></button>
+        <form class="popup__content" name="popup-form">
+          <h2 class="popup__title">Редактировать профиль</h2>
+          <fieldset class="popup__content-fields">
+            <input
+              class="popup__field popup__field_type_name"
+              name="field-name"
+              type="text"
+              value="Жак-Ив Кусто"
+              placeholder="Имя"
+            />
+            <input
+              class="popup__field popup__field_type_job"
+              name="field-job"
+              type="text"
+              value="Исследователь океана"
+              placeholder="Описание"
+            />
+            <input class="popup__save" type="submit" value="Сохранить" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

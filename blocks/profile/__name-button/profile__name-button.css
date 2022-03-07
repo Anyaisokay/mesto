@@ -12,7 +12,6 @@
 
 @media screen and (max-width: 500px) {
     .profile__name-button {
-        align-self: center;
         width: 282px;
         justify-content: center;
     }
