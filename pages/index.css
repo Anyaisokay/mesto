@@ -29,3 +29,16 @@
 @import url(../blocks/popup/__field/popup__field.css);
 @import url(../blocks/popup/__save/popup__save.css);
 @import url(../blocks/popup/_opened/popup_opened.css);
+@import url(../blocks/popup-add/popup-add.css);
+@import url(../blocks/popup-add/_opened/popup-add_opened.css);
+@import url(../blocks/popup-add/__container/popup-add__container.css);
+@import url(../blocks/popup-add/__close/popup-add__close.css);
+@import url(../blocks/popup-add/__create/popup-add__create.css);
+@import url(../blocks/card/__delete/card__delete.css);
+@import url(../blocks/card/__like/_active/card__like_active.css);
+@import url(../blocks/popup-image/popup-image.css);
+@import url(../blocks/popup-image/_opened/popup-image_opened.css);
+@import url(../blocks/popup-image/__close/popup-image__close.css);
+@import url(../blocks/popup-image/__container/popup-image__container.css);
+@import url(../blocks/popup-image/__pic/popup-image__pic.css);
+@import url(../blocks/popup-image/__title/popup-image__title.css);

@@ -20,15 +20,28 @@
         <div class="profile__info">
           <div class="profile__name-button">
             <h1 class="profile__name">Жак-Ив Кусто</h1>
-            <button class="profile__edit-button" type="button" aria-label="Редактировать профиль"></button>
+            <button
+              class="profile__edit-button"
+              type="button"
+              aria-label="Редактировать профиль"
+            ></button>
           </div>
           <p class="profile__content">Исследователь океана</p>
         </div>
-        <button class="profile__add-button" type="button" aria-label="Добавить фото"></button>
+        <button
+          class="profile__add-button"
+          type="button"
+          aria-label="Добавить фото"
+        ></button>
       </section>
       <section class="cards">
         <ul class="cards__grid">
-          <li class="card">
+         <!--<li class="card">
+            <button
+              class="card__delete"
+              type="button"
+              aria-label="Удалить карточку"
+            ></button>
             <img
               class="card__pic"
               src="./images/kuraiskaya.jpg"
@@ -36,24 +49,51 @@
             />
             <div class="card__content">
               <h2 class="card__title">Курайская степь</h2>
-              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
+              <button
+                class="card__like"
+                type="button"
+                aria-label="Отметить понравившееся"
+              ></button>
             </div>
           </li>
           <li class="card">
+            <button
+              class="card__delete"
+              type="button"
+              aria-label="Удалить карточку"
+            ></button>
             <img class="card__pic" src="./images/ai-petri.jpg" alt="Ай-Петри" />
             <div class="card__content">
               <h2 class="card__title">Ай-Петри</h2>
-              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
+              <button
+                class="card__like"
+                type="button"
+                aria-label="Отметить понравившееся"
+              ></button>
             </div>
           </li>
           <li class="card">
+            <button
+              class="card__delete"
+              type="button"
+              aria-label="Удалить карточку"
+            ></button>
             <img class="card__pic" src="./images/derbent.jpg" alt="Дербент" />
             <div class="card__content">
               <h2 class="card__title">Дербент</h2>
-              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
+              <button
+                class="card__like"
+                type="button"
+                aria-label="Отметить понравившееся"
+              ></button>
             </div>
           </li>
           <li class="card">
+            <button
+              class="card__delete"
+              type="button"
+              aria-label="Удалить карточку"
+            ></button>
             <img
               class="card__pic"
               src="./images/sulak.jpg"
@@ -61,10 +101,19 @@
             />
             <div class="card__content">
               <h2 class="card__title">Сулакский каньон</h2>
-              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
+              <button
+                class="card__like"
+                type="button"
+                aria-label="Отметить понравившееся"
+              ></button>
             </div>
           </li>
           <li class="card">
+            <button
+              class="card__delete"
+              type="button"
+              aria-label="Удалить карточку"
+            ></button>
             <img
               class="card__pic"
               src="./images/nicola-lenivets.jpg"
@@ -72,16 +121,29 @@
             />
             <div class="card__content">
               <h2 class="card__title">Никола-Ленивец</h2>
-              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
+              <button
+                class="card__like"
+                type="button"
+                aria-label="Отметить понравившееся"
+              ></button>
             </div>
           </li>
           <li class="card">
+            <button
+              class="card__delete"
+              type="button"
+              aria-label="Удалить карточку"
+            ></button>
             <img class="card__pic" src="./images/simeis.jpg" alt="Симеиз" />
             <div class="card__content">
               <h2 class="card__title">Симеиз</h2>
-              <button class="card__like" type="button" aria-label="Отметить понравившееся"></button>
+              <button
+                class="card__like"
+                type="button"
+                aria-label="Отметить понравившееся"
+              ></button>
             </div>
-          </li>
+          </li>-->
         </ul>
       </section>
     </main>
@@ -90,7 +152,11 @@
     </footer>
     <div class="popup">
       <div class="popup__container">
-        <button class="popup__close" type="button" aria-label="Закрыть окно"></button>
+        <button
+          class="popup__close"
+          type="button"
+          aria-label="Закрыть окно"
+        ></button>
         <form class="popup__content" name="popup-form">
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__content-fields">
@@ -113,6 +179,65 @@
         </form>
       </div>
     </div>
+    <div class="popup-add">
+      <div class="popup__container">
+        <button
+          class="popup-add__close"
+          type="button"
+          aria-label="Закрыть окно"
+        ></button>
+        <form class="popup-add__content" name="popup-form">
+          <h2 class="popup__title">Новое место</h2>
+          <fieldset class="popup__content-fields">
+            <input
+              class="popup__field popup__field_type_title"
+              name="field-title"
+              type="text"
+              value=""
+              placeholder="Название"
+            />
+            <input
+              class="popup__field popup__field_type_link"
+              name="field-link"
+              type="text"
+              value=""
+              placeholder="Ссылка на картинку"
+            />
+            <input class="popup-add__create" type="submit" value="Создать" />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+    <div class="popup-image">
+      <div class="popup-image__container">
+        <button
+        class="popup-image__close"
+        type="button"
+        aria-label="Закрыть окно"
+      ></button>
+      <img class="popup-image__pic" src="" alt="">
+      <p class="popup-image__title"></p>
+      </div>
+    </div>
+    <template id="card-template">
+      <li class="card">
+        <button
+        class="card__delete"
+        type="button"
+        aria-label="Удалить карточку"
+      ></button>
+        <img class="card__pic" src="" alt="" />
+        <div class="card__content">
+          <h2 class="card__title"></h2>
+          <button
+            class="card__like"
+            type="button"
+            aria-label="Отметить понравившееся"
+          ></button>
+        </div>
+      </li>
+    </template>
+
     <script src="./scripts/index.js"></script>
   </body>
 </html>
