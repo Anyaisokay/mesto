@@ -97,8 +97,8 @@ function addFormSubmitHandler (evt) {
   // отменяем стандартную отправку формы
   evt.preventDefault();
 
-  let titleCard = addFormElement.querySelector('.popup__field_type_title');
-  let linkCard = addFormElement.querySelector('.popup__field_type_link');
+  let titleCard = addFormElement.querySelector('.popup-add__field_type_title');
+  let linkCard = addFormElement.querySelector('.popup-add__field_type_link');
 
   prependAddCards(addCard(titleCard.value, linkCard.value));
   titleCard.value = '';
