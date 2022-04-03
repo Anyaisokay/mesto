@@ -35,129 +35,20 @@
         ></button>
       </section>
       <section class="cards">
-        <ul class="cards__grid">
-         <!--<li class="card">
-            <button
-              class="card__delete"
-              type="button"
-              aria-label="Удалить карточку"
-            ></button>
-            <img
-              class="card__pic"
-              src="./images/kuraiskaya.jpg"
-              alt="Курайская степь"
-            />
-            <div class="card__content">
-              <h2 class="card__title">Курайская степь</h2>
-              <button
-                class="card__like"
-                type="button"
-                aria-label="Отметить понравившееся"
-              ></button>
-            </div>
-          </li>
-          <li class="card">
-            <button
-              class="card__delete"
-              type="button"
-              aria-label="Удалить карточку"
-            ></button>
-            <img class="card__pic" src="./images/ai-petri.jpg" alt="Ай-Петри" />
-            <div class="card__content">
-              <h2 class="card__title">Ай-Петри</h2>
-              <button
-                class="card__like"
-                type="button"
-                aria-label="Отметить понравившееся"
-              ></button>
-            </div>
-          </li>
-          <li class="card">
-            <button
-              class="card__delete"
-              type="button"
-              aria-label="Удалить карточку"
-            ></button>
-            <img class="card__pic" src="./images/derbent.jpg" alt="Дербент" />
-            <div class="card__content">
-              <h2 class="card__title">Дербент</h2>
-              <button
-                class="card__like"
-                type="button"
-                aria-label="Отметить понравившееся"
-              ></button>
-            </div>
-          </li>
-          <li class="card">
-            <button
-              class="card__delete"
-              type="button"
-              aria-label="Удалить карточку"
-            ></button>
-            <img
-              class="card__pic"
-              src="./images/sulak.jpg"
-              alt="Сулакский каньон"
-            />
-            <div class="card__content">
-              <h2 class="card__title">Сулакский каньон</h2>
-              <button
-                class="card__like"
-                type="button"
-                aria-label="Отметить понравившееся"
-              ></button>
-            </div>
-          </li>
-          <li class="card">
-            <button
-              class="card__delete"
-              type="button"
-              aria-label="Удалить карточку"
-            ></button>
-            <img
-              class="card__pic"
-              src="./images/nicola-lenivets.jpg"
-              alt="Никола-Ленивец"
-            />
-            <div class="card__content">
-              <h2 class="card__title">Никола-Ленивец</h2>
-              <button
-                class="card__like"
-                type="button"
-                aria-label="Отметить понравившееся"
-              ></button>
-            </div>
-          </li>
-          <li class="card">
-            <button
-              class="card__delete"
-              type="button"
-              aria-label="Удалить карточку"
-            ></button>
-            <img class="card__pic" src="./images/simeis.jpg" alt="Симеиз" />
-            <div class="card__content">
-              <h2 class="card__title">Симеиз</h2>
-              <button
-                class="card__like"
-                type="button"
-                aria-label="Отметить понравившееся"
-              ></button>
-            </div>
-          </li>-->
-        </ul>
+        <ul class="cards__grid"></ul>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__content">© 2022 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_type_profile">
       <div class="popup__container">
         <button
           class="popup__close"
           type="button"
           aria-label="Закрыть окно"
         ></button>
-        <form class="popup__content" name="popup-form">
+        <form class="popup__content" name="profile-form">
           <h2 class="popup__title">Редактировать профиль</h2>
           <fieldset class="popup__content-fields">
             <input
@@ -174,59 +65,57 @@
               value="Исследователь океана"
               placeholder="Описание"
             />
-            <input class="popup__save" type="submit" value="Сохранить" />
           </fieldset>
+          <button class="popup__button">Сохранить</button>
         </form>
       </div>
     </div>
-    <div class="popup-add">
-      <div class="popup-add__container">
+    <div class="popup popup_type_card">
+      <div class="popup__container">
         <button
-          class="popup-add__close"
+          class="popup__close"
           type="button"
           aria-label="Закрыть окно"
         ></button>
-        <form class="popup-add__content" name="popup-form">
-          <h2 class="popup-add__title">Новое место</h2>
-          <fieldset class="popup-add__content-fields">
+        <form class="popup__content" name="card-form">
+          <h2 class="popup__title">Новое место</h2>
+          <fieldset class="popup__content-fields">
             <input
-              class="popup-add__field popup-add__field_type_title"
+              class="popup__field popup__field_type_title"
               name="field-title"
               type="text"
-              value=""
               placeholder="Название"
             />
             <input
-              class="popup-add__field popup-add__field_type_link"
+              class="popup__field popup__field_type_link"
               name="field-link"
               type="text"
-              value=""
               placeholder="Ссылка на картинку"
             />
-            <input class="popup-add__create" type="submit" value="Создать" />
           </fieldset>
+          <button class="popup__button">Создать</button>
         </form>
       </div>
     </div>
-    <div class="popup-image">
-      <div class="popup-image__container">
+    <div class="popup popup_type_image">
+      <div class="popup__image-container">
         <button
-        class="popup-image__close"
-        type="button"
-        aria-label="Закрыть окно"
-      ></button>
-      <img class="popup-image__pic">
-      <p class="popup-image__title"></p>
+          class="popup__close"
+          type="button"
+          aria-label="Закрыть окно просмотра карточки"
+        ></button>
+        <img class="popup__pic" />
+        <p class="popup__description"></p>
       </div>
     </div>
     <template id="card-template">
       <li class="card">
         <button
-        class="card__delete"
-        type="button"
-        aria-label="Удалить карточку"
-      ></button>
-        <img class="card__pic">
+          class="card__delete"
+          type="button"
+          aria-label="Удалить карточку"
+        ></button>
+        <img class="card__pic" />
         <div class="card__content">
           <h2 class="card__title"></h2>
           <button
@@ -237,7 +126,7 @@
         </div>
       </li>
     </template>
-
+    <script src="./scripts/cards.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>
