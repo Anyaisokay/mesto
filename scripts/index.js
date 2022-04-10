@@ -3,8 +3,8 @@ const profilePopup = document.querySelector(".popup_type_profile");
 // находим форму изменения профиля
 const profileForm = document.querySelector('form[name="profile-form"]');
 // находим поля формы изменения профиля
-const nameInput = profilePopup.querySelector(".popup__field_type_name");
-const jobInput = profilePopup.querySelector(".popup__field_type_job");
+const nameInput = profilePopup.querySelector("#profile-name");
+const jobInput = profilePopup.querySelector("#profile-job");
 // находим кнопку изменить профиль
 const profileEditButton = document.querySelector(".profile__edit-button");
 // находим кнопку закрыть форму изменения профиля
@@ -24,8 +24,8 @@ const cardForm = document.querySelector('form[name="card-form"]');
 const cardAddButton = document.querySelector(".profile__add-button");
 
 // находим поля формы карточки
-const titleCardInput = cardPopup.querySelector(".popup__field_type_title");
-const linkCardInput = cardPopup.querySelector(".popup__field_type_link");
+const titleCardInput = cardPopup.querySelector("#card-title");
+const linkCardInput = cardPopup.querySelector("#card-link");
 // находим кнопку закрыть форму добавления карточки
 const cardCloseButton = cardPopup.querySelector(".popup__close");
 
@@ -41,11 +41,28 @@ const imageCloseButton = imagePopup.querySelector(".popup__close");
 // открываем попап
 function openPopup(popup) {
   popup.classList.add("popup_opened");
+  document.addEventListener('keyup', handleEsc);
 }
 
 // закрываем попап
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
+  document.removeEventListener('keyup', handleEsc);
+}
+
+// функция нажатия клавиши ESC
+function handleEsc(evt) {
+  evt.preventDefault();
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector('.popup_opened');
+    closePopup(openedPopup);
+  }
+}
+
+function inactiveButton(form) {
+  const submitButton = form.querySelector('.popup__button');
+  submitButton.disabled = true;
+  submitButton.classList.add('popup__button_inactive');
 }
 
 // функция вставки в поля значений из профиля
@@ -82,7 +99,7 @@ function closeOutForm(evt) {
   }
 }
 
-// открываем попап формы добавления карточки
+// функция открытия попапа формы добавления карточки
 function openCardPopup() {
   openPopup(cardPopup);
 }
@@ -92,8 +109,9 @@ function handleSubmitCardForm(evt) {
   evt.preventDefault();
 
   prependCard(addCard(titleCardInput.value, linkCardInput.value));
-  evt.currentTarget.reset();
   closePopup(cardPopup);
+  inactiveButton(evt.currentTarget);
+  evt.currentTarget.reset();
 }
 
 // функция добавления карточки

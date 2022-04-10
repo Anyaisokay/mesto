@@ -1,0 +1,12 @@
+.popup__field-error {
+  display: block;
+  margin: 0;
+  transition: opacity 0.3s linear;
+  height: 12px;
+  min-height: 30px;
+  font-size: 12px;
+  line-height: 15px;
+  box-sizing: border-box;
+  opacity: 0;
+  color: red;
+}
